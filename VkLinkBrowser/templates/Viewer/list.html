@@ -1,0 +1,24 @@
+{% extends 'ViewerBase.html' %}
+
+{% load static %}
+
+{% block username %} {{Username}} {{id}} {% endblock %}
+
+{% block link %}
+        {% if VKLink %}
+                "GO to VK!" onClick="window.open('{{ VKLink }}')"
+        {% else %}
+                "No link"
+        {% endif %}
+{% endblock %}
+
+{% block NumOfRecords %} {{ NumOfRecords }} {% endblock %} 
+
+{% block favicon %}
+        {% if Public_id == "favorites" %}
+                {% static 'img/heart/favicon.png' %}
+        {% else %}
+                {% static 'img/main/favicon.png' %}
+        {% endif %}
+{% endblock %}
+

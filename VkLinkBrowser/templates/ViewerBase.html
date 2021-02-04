@@ -1,0 +1,48 @@
+{% load static %}
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{Public_id}}</title>
+        <link rel="stylesheet" id="ample-style-css" href={% static 'css/styles.css' %}>
+        <link rel="shortcut icon" href={% block favicon %}{% endblock %} type="image/x-icon">
+    </head>
+    <body>
+
+        <h1 id="username">{% block username %}Имя пользователя{% endblock %}</h1>
+
+        <form name="FindInfo" method="GET">
+
+            <strong>Всего записей:{% block NumOfRecords %}нет данных((({% endblock %}</strong>
+            <p><b>Найти по:</b><Br>
+                
+                <input type="radio" name="find" value="ID"> ID в базе<Br>
+                <input type="radio" name="find" value="Name"> Имени и фамилии<Br>
+                <input type="radio" name="find" value="Link"> Ссылке вк<Br>
+                <input type="text" size="30">
+                <input type="button" name="ButtonFind" value="Найти">
+                    
+            </p>
+
+        </form>
+
+        <form name="main_form" method="GET">   
+
+            <input id="gotovk" type="button" value={% block link %}{% endblock %}>
+
+            {% if Public_id == "favorites" %}
+                <input id="deletefromfavorite" type="button" value="Delete from favorite">
+            {% else %}
+                <input id="addtofavorite" type="button" value="Add to favorite">
+            {% endif %}
+            
+            <input id="HomeButton" type="button" value="Go to home page" onclick="location.href={% url 'options' %}">
+
+            <input id="right_button" name="RightButton" src={% static 'img/right_button.png' %} type="image" onClick="action()">
+
+            <input id="left_button" name="LeftButton" src={% static 'img/left_button.png' %} type="image">
+
+        </form>
+
+        <script src="{% static 'js/ButtonHandler.js' %}"></script>
+    </body>
+</html>

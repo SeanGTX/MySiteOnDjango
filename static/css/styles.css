@@ -1,0 +1,55 @@
+#left_button, #right_button, #gotovk, #addtofavorite, #HomeButton,#deletefromfavorite {
+	position: fixed;
+	color: #000;
+	text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+	transition: 0.2s;
+}
+
+#left_button{
+	top: 210px;
+	left: 50px;
+}
+
+#right_button{
+	top: 210px;
+	right: 50px;
+}
+
+#gotovk, #HomeButton{
+	font-size:x-large;
+	top: 200px;
+}
+
+#gotovk{
+	left: 42%;	
+}
+
+#addtofavorite, #deletefromfavorite{
+	font-size:x-large;
+	left: 41%;
+	top: 300px;
+}
+
+#deletefromfavorite{
+	left: 39%;
+}
+
+#HomeButton{
+	left: 40%;
+	top: 400px;
+}
+
+#username{
+	font-size:x-large;
+	text-align: center;
+	top: 50px;
+	left: 40%;
+}
+

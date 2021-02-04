@@ -1,0 +1,19 @@
+{% extends 'BrowserBase.html' %}
+
+{% block content %}
+
+    {% if availablePubs %}
+        <ul>
+            {% for p in availablePubs %}
+                <li><a href="{% url 'viewer' p %}">{{p}}</a></li>
+            {% endfor %}
+            <br>
+            <li><a href="{% url 'viewer' 'favorites' %}">Избранное</a></li>
+        </ul>
+    {% else %}
+        <br>
+        <br>
+        Нет доступных пабликов
+    {% endif %}
+
+{% endblock %}

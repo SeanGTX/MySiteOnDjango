@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Список пабликов</title>
+        <link rel="shortcut icon" href={% static 'img/main/favicon.png' %} type="image/x-icon">
+    </head>
+    <body>
+        Список доступных пабликов
+        {% block content %}{% endblock %}
+    </body>
+</html>
